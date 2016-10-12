@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="4.0"
+    />
+<!--cycleInterpolator循环加速器 作用是让动画连续执行多次
+    android:cycles="4.0"表示次数
+-->

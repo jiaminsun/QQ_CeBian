@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+           android:fromXDelta="0.0"
+           android:toXDelta="15.0"
+           android:duration="700"
+           android:interpolator="@anim/cycle_7"
+    />
+<!--这个布局代码的意思是：在0.7秒之内，X坐标从0到15晃动4下
+ X轴一般表示水平方向
+-->

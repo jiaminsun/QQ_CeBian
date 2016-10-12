@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qqcebian.demo.view.DragLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="50dp"
+        >
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!--主头像-->
+            <ImageView
+                android:id="@+id/iv_bottom"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/ic_launcher"
+                />
+            <!--头像名字-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="BlueMor"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <!--底部邮箱-->
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="jiamin_rookie@163.com"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            />
+
+        <!--用于显示菜单栏，头像下面的-->
+         <ListView
+             android:id="@+id/lv"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_above="@id/tv_mail"
+             android:layout_below="@id/ll1"
+             android:layout_marginBottom="30dp"
+             android:layout_marginTop="20dp"
+             android:cacheColorHint="#00000000"
+             android:divider="@null"
+             android:textColor="#ffffff"
+             />
+    </RelativeLayout>
+
+    <com.qqcebian.demo.view.MyRelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#eeeeee">
+       <RelativeLayout
+          android:id="@+id/rl_title"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:background="#009990">
+           <ImageView
+               android:id="@+id/iv_icon"
+               android:layout_width="42dp"
+               android:layout_height="42dp"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="10dp"
+               android:scaleType="centerCrop"
+               android:src="@mipmap/ic_launcher" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:text="系统相册"
+               android:textColor="#ffffff"
+               android:textSize="20sp" />
+
+       </RelativeLayout>
+
+        <!--网格视图，4列，用于显示主页面头像-->
+      <GridView
+          android:id="@+id/gv_img"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/rl_title"
+          android:cacheColorHint="#00000000"
+          android:numColumns="4"
+          android:verticalSpacing="20dp" >
+      </GridView>
+
+        <TextView
+            android:id="@+id/iv_noimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:text="你的系统相册没有图片哦~"
+            android:visibility="gone" />
+            <!--visibility="gone"表示不可见，且当前控件不占用View中空间-->
+
+    </com.qqcebian.demo.view.MyRelativeLayout>
+
+</com.qqcebian.demo.view.DragLayout>
